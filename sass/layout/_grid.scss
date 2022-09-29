@@ -1,0 +1,27 @@
+// custom grid (float)
+.row {
+    // max-width: 114rem;
+
+    &:not(:last-child){
+        margin-bottom: 1rem;
+    }
+
+    // @include clearfix;
+    [class^="col-"]{
+        float: left;
+
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+    }
+
+    .col-1-of-2 {
+        width: calc((100% - 2rem) /2);
+        float: left;
+
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+    }
+    
+}

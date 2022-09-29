@@ -1,0 +1,33 @@
+/* applicaple to all elements in the browser */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    /* all elements inherit box-sizing property -> BP*/
+    box-sizing: inherit;
+}
+
+/* root */
+html {
+    /* Bad practice to set the root value here to pixels as it's fixed and when the user zooms in or out, they still can't change it  */
+    /* font-size: 10px; */
+    /* for rem units 1rem = 62.5% * 16px */ 
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 3rem;
+    // overflow: hidden;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: $color-black;
+}
