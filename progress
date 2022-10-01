@@ -1,0 +1,24 @@
+What did I learn from this project?
+
+1. New and modern CSS properties & selectors
+   1. important: use calc property to calculate dynamic values
+   2. pseudo, attribute & expression selectors
+2. How to create animations with keyframes & transitions
+3. SEO Optimizations
+4. THEORY: CSS BEHIND THE SCENES
+   1. CSS compilation flow and CSSOM (CSS Object Model)
+   2. Visual Formatting Model
+      1. The box model
+      2. Box types (display property)
+      3. Positiong schemas (float, flex & grid)
+      4. Stacking contexts
+   3. CSS Parsing: importance, specificity & source order
+5. Responsive Design:
+   1. The use of relative units & inheritance
+   2. Fluid layouts
+6. CSS Architcture
+   1. Component-driven design
+   2. BEM (Block Element Modifier) pattern
+   3. 7-1 pattern (7 folders structure)
+7. SCSS (sass preprocessor) and its main features (variables, mixins, nesting, partials and imports, operators)
+8.
