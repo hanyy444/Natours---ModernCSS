@@ -12,8 +12,21 @@
 html {
     /* Bad practice to set the root value here to pixels as it's fixed and when the user zooms in or out, they still can't change it  */
     /* font-size: 10px; */
-    /* for rem units 1rem = 62.5% * 16px */ 
+    /* for rem units 1rem = 62.5% * 16px, so 1rem = 10px */ 
     font-size: 62.5%;
+
+    // NOTE: I can do a loop in js to repeat this for each breakpoint in React..
+    // order here matters (bigger screen first) and differs from mobile-first design
+
+    @include respond(big-desktop){ // w > 1800
+        font-size: 75%; // 1rem = 12px, 12/16 = 75%
+    }
+    @include respond(tab-land){ // w < 1200
+        font-size: 56.25%; // 1rem = 9px, 9/16 = 56.2%
+    }
+    @include respond(tab-port){ // w < 900
+        font-size: 50%; // 1rem = 8px, 8/16 - 50%
+    }
 }
 
 body {
@@ -25,9 +38,19 @@ body {
     padding: 3rem;
     // overflow: hidden;
     box-sizing: border-box;
+
+    @include respond(tab-port) { 
+        font-size: 50%; 
+        padding: 0;
+    }
 }
 
 a {
     text-decoration: none;
     color: $color-black;
+}
+
+::selection{
+    background-color: $color-primary;
+    color: $color-white;
 }

@@ -1,7 +1,7 @@
 .header {
     height: 95vh;
 
-    background-image: linear-gradient(to right bottom, #7ed56f80, #28b48580), url('../img/hero.jpg');
+    background-image: linear-gradient(to right bottom, #7ed56f80, #28b48580), url('../img/hero-small.jpg');
 
     background-size: cover;
 
@@ -10,6 +10,15 @@
 
     /* polygon vertices (clockwise) ->  */
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+            (min-width: 125em){
+        background-image: linear-gradient(to right bottom, #7ed56f80, #b4283b80), url('../img/hero.jpg');
+    }
+
+    @include respond(phone){
+        clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+    }
 
     /* Reference for child elements to be positioned */
     position: relative;
